@@ -1,0 +1,8 @@
+INSERT INTO TutorLog (TutorUsername, StudentUsername, CourseTitle, DateTime)
+    VALUES ('$Username', (SELECT Username FROM Student WHERE Student_Id=1), 
+    '$Title', '$DateTime');
+    
+
+SELECT Title
+    FROM TutorPosition
+    WHERE Username='$Username';

@@ -1,0 +1,18 @@
+-- Username - foreign key on Faculty  |
+-- Intrest                           | - primary key
+
+CREATE TABLE `FacultyResearchIntrest`
+(
+    Username varchar(50)
+        NOT NULL,
+    Intrest varchar(50)
+        NOT NULL,
+
+    PRIMARY KEY (Username, Intrest),
+
+    FOREIGN KEY (Username)
+        REFERENCES `Faculty` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

@@ -1,0 +1,15 @@
+-- Username - primary key, foreign key on Student
+
+CREATE TABLE `Tutor`
+(
+    Username varchar(50)
+        NOT NULL,
+
+    PRIMARY KEY (Username),
+
+    FOREIGN KEY (Username)
+        REFERENCES `Student` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

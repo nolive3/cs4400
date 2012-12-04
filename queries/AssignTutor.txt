@@ -1,0 +1,9 @@
+INSERT INTO TutorPosition(Username, Title)
+    VALUES ((SELECT Username FROM RegUser WHERE Name='$Name'),
+     (SELECT DISTINCT Title FROM Section WHERE Username='$USer2' ));
+
+SELECT Name
+    FROM TutorApplication NATURAL JOIN RegUser
+    WHERE TutorApplication.Username=RegUser.Username AND 
+    (SELECT DISTINCT Title FROM Section WHERE Username='$USer2' )    =TutorApplication.Title;
+

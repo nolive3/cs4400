@@ -1,0 +1,4 @@
+SELECT Course.Title, RegUser.Name, RegUser.Email
+    FROM Course JOIN RegUser JOIN TutorPosition
+    WHERE Course.Title LIKE '%$CourseTitle%' AND RegUser.Username = TutorPosition.Username AND Course.Title = TutorPosition.Title
+    GROUP BY Course.Title;

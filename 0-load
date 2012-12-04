@@ -1,0 +1,26 @@
+source creates/1-Department;
+source creates/1-User;
+
+-- source creates/2-Admin;
+-- source creates/2-CourseCode;
+source creates/2-Course;
+-- source creates/2-CourseOffering;
+source creates/2-RegUser;
+
+source creates/3-Faculty;
+source creates/3-Student;
+source creates/3-SameAs;
+
+source creates/4-EducationHistory;
+source creates/4-FacultyResearchIntrest;
+source creates/4-Section;
+source creates/4-Tutor;
+
+source creates/5-Registration;
+source creates/5-TutorApplication;
+source creates/5-TutorLog;
+source creates/5-TutorPosition;
+
+source creates/6-CreateDepartments;
+
+source creates/7-PreloadTests;

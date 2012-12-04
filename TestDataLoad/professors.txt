@@ -1,0 +1,294 @@
+INSERT INTO User (Username, Password, Type)
+    VALUE ('profman123', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('profman123', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('profman123', 'AE', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('danG', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('danG', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('danG', 'ECE', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor3', 'unoguessthis', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor3', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor3', 'ECE', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor4', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor4', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor4', 'CS', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor5', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor5', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor5', 'BIOL', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor6', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor6', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor6', 'BME', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor7', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor7', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor7', 'AE', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor8', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor8', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor8', 'CS', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor9', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor9', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor9', 'BME', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor10', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor10', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor10', 'CS', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor11', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor11', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor11', 'BIOL', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor12', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor12', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor12', 'BIOL', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor13', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor13', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor13', 'CS', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor14', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor14', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor14', 'AE', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor15', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor15', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor15', 'ECE', 'Professor');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('professor16', 'supersecret', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('professor16', 'F');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('professor16', 'ECE', 'Professor');
+
+UPDATE RegUser
+SET Address='GT',
+    Name='Prof Smith',
+    Email='prof@gatech.edu',
+    DateOfBirth='1943-03-23',
+    PermanentAddress='Atlanta',
+    Gender='M',
+    ContactNumber='1234567890'
+WHERE Username='profman123';
+
+UPDATE RegUser
+SET Address='GTL',
+    Name='Danny Boy',
+    Email='prof2@gatech.edu',
+    DateOfBirth='1983-03-23',
+    PermanentAddress='Texas',
+    Gender='M',
+    ContactNumber='123456'
+WHERE Username='danG';
+
+UPDATE RegUser
+SET Address='England',
+    Name='Emma Watson',
+    Email='emma.watson@harrypotter.com',
+    DateOfBirth='1989-04-27',
+    PermanentAddress='England',
+    Gender='F',
+    ContactNumber='4448273'
+WHERE Username='professor3';
+
+UPDATE RegUser
+SET Address='NY',
+    Name='Mary Poppins',
+    Email='maryP@old.com',
+    DateOfBirth='1912-01-03',
+    PermanentAddress='NY',
+    Gender='F',
+    ContactNumber='1983211'
+WHERE Username='professor4';
+
+
+UPDATE RegUser
+SET Address='GT',
+    Name='Colonel Mustard',
+    Email='livingRoom@candlestick.com',
+    DateOfBirth='1945-03-22',
+    PermanentAddress='House',
+    Gender='M',
+    ContactNumber='8768765'
+WHERE Username='professor5';
+
+
+UPDATE RegUser
+SET Address='293 Atlanta St',
+    Name='Paul McCartney',
+    Email='paul@beatles.org',
+    DateOfBirth='1945-11-12',
+    PermanentAddress='293 Atlanta St',
+    Gender='M',
+    ContactNumber='9998765'
+WHERE Username='professor6';
+
+
+UPDATE RegUser
+SET Address='111 Robinhood Dr.',
+    Name='Monica Stevens',
+    Email='hellokitty@dolls.com',
+    DateOfBirth='1977-03-04',
+    PermanentAddress='111 Robinhood Dr.',
+    Gender='F',
+    ContactNumber='0981234'
+WHERE Username='professor7';
+
+
+UPDATE RegUser
+SET Address='Gotham City',
+    Name='Batman',
+    Email='batman@batman.batman',
+    DateOfBirth='1954-07-11',
+    PermanentAddress='Gotham City',
+    Gender='M',
+    ContactNumber='4533211'
+WHERE Username='professor8';
+
+
+UPDATE RegUser
+SET Address='France',
+    Name='Napoleon',
+    Email='napoleon@worldDomination.com',
+    DateOfBirth='1453-03-23',
+    PermanentAddress='6 Feet Under',
+    Gender='M',
+    ContactNumber='9999999'
+WHERE Username='professor9';
+
+
+UPDATE RegUser
+SET Address='The Shire',
+    Name='Bilbo Baggins',
+    Email='bilbo@lord.rings',
+    DateOfBirth='1944-03-03',
+    PermanentAddress='Hobbiton',
+    Gender='M',
+    ContactNumber='1112233'
+WHERE Username='professor10';
+
+
+UPDATE RegUser
+SET Address='Tattooine',
+    Name='Luke Skywalker',
+    Email='luke@jedi.force',
+    DateOfBirth='1922-12-12',
+    PermanentAddress='Tattooine',
+    Gender='M',
+    ContactNumber='5567656'
+WHERE Username='professor11';
+
+
+UPDATE RegUser
+SET Address='ship',
+    Name='Princess Leia',
+    Email='leia@rebels.com',
+    DateOfBirth='1963-01-01',
+    PermanentAddress='ship',
+    Gender='F',
+    ContactNumber='7778898'
+WHERE Username='professor12';
+
+
+UPDATE RegUser
+SET Address='Boston',
+    Name='Indiana Jones',
+    Email='Jones@aliens.wtf',
+    DateOfBirth='1944-04-29',
+    PermanentAddress='Boston',
+    Gender='M',
+    ContactNumber='3332987'
+WHERE Username='professor13';
+
+
+UPDATE RegUser
+SET Address='California',
+    Name='Sheldon Cooper',
+    Email='sheldoncooper@bigbang.theory',
+    DateOfBirth='1980-06-09',
+    PermanentAddress='Texas',
+    Gender='M',
+    ContactNumber='1231212'
+WHERE Username='professor14';
+
+
+UPDATE RegUser
+SET Address='Lombardi Avenue',
+    Name='Aaron Rodgers',
+    Email='ARodgers@packers.com',
+    DateOfBirth='1984-12-02',
+    PermanentAddress='California',
+    Gender='M',
+    ContactNumber='0983333'
+WHERE Username='professor15';
+
+UPDATE RegUser
+SET Address='Lombardi Avenue',
+    Name='Bart Starr',
+    Email='bart@packers.com',
+    DateOfBirth='1984-11-09',
+    PermanentAddress='California',
+    Gender='M',
+    ContactNumber='0983334'
+WHERE Username='professor16';
+
+
+
+
+INSERT INTO FacultyResearchIntrest (Username, Intrest)
+VALUE ('danG', 'bowling');
+INSERT INTO FacultyResearchIntrest (Username, Intrest)
+VALUE ('profman123', 'bowling');
+INSERT INTO FacultyResearchIntrest (Username, Intrest)
+VALUE ('danG', 'lasers');
+INSERT INTO FacultyResearchIntrest (Username, Intrest)
+VALUE ('profman123', 'jets');

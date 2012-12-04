@@ -1,0 +1,409 @@
+INSERT INTO User (Username, Password, Type)
+    VALUE ('gburdell3', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('gburdell3', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('gburdell3', 'AE', 'MS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('slacker', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('slacker', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('slacker', 'ECE', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student3', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student3', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student3', 'CS', 'MS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student4', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student4', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student4', 'BIOL', 'BS');
+
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student5', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student5', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student5', 'BME', 'MS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student6', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student6', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student6', 'AE', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student7', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student7', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student7', 'AE', 'MS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student8', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student8', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student8', 'ECE', 'BS');
+
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student9', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student9', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student9', 'CS', 'MS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student10', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student10', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student10', 'CS', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student11', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student11', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student11', 'BIOL', 'MS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student12', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student12', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student12', 'BIOL', 'BS');
+
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student13', '123', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student13', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student13', 'AE', 'MS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student14', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student14', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student14', 'ECE', 'BS');
+
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student15', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student15', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student15', 'CS', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student16', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student16', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student16', 'ECE', 'BS');
+
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student17', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student17', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student17', 'ECE', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student18', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student18', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student18', 'ECE', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student19', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student19', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student19', 'ECE', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student20', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student20', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student20', 'CS', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student21', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student21', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student21', 'CS', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student22', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student22', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student22', 'CS', 'BS');
+
+INSERT INTO User (Username, Password, Type)
+    VALUE ('student23', 'a', 'R');
+INSERT INTO RegUser (Username, Type)
+    VALUE ('student23', 'S');
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('student23', 'CS', 'BS');
+
+
+
+
+
+UPDATE RegUser
+SET Address='CULC',
+    Name='George P. Burdell',
+    Email='gburdell3@gatech.edu',
+    DateOfBirth='1927-07-15',
+    PermanentAddress='456 North Avenue',
+    Gender='M',
+    ContactNumber='5555551234'
+WHERE Username='gburdell3';
+
+UPDATE RegUser
+SET Address='TheBar',
+    Name='Adam Jones',
+    Email='slacker@gatech.edu',
+    DateOfBirth='1967-07-15',
+    PermanentAddress='Somewhere',
+    Gender='M',
+    ContactNumber='5551234'
+WHERE Username='slacker';
+
+UPDATE RegUser
+SET Address='123 Happy St.',
+    Name='Lois Lane',
+    Email='llane@superman.com',
+    DateOfBirth='1934-02-23',
+    PermanentAddress='123 Happy St.',
+    Gender='F',
+    ContactNumber='5551234'
+WHERE Username='student3';
+
+UPDATE RegUser
+SET Address='57 N. Davis Dr.',
+    Name='Billy Bob',
+    Email='hello@w.orld',
+    DateOfBirth='2000-04-15',
+    PermanentAddress='747 Mary Lane',
+    Gender='M',
+    ContactNumber='1234567'
+WHERE Username='student4';
+
+UPDATE RegUser
+SET Address='Hogwarts',
+    Name='Harry Potter',
+    Email='harry.potter@hogwarts.edu',
+    DateOfBirth='1990-7-31',
+    PermanentAddress='Cupboard Under the Stairs',
+    Gender='M',
+    ContactNumber='7484323'
+WHERE Username='student5';
+
+UPDATE RegUser
+SET Address='746 Southwick Ct.',
+    Name='Elizabeth Bruce',
+    Email='bacon@email.com',
+    DateOfBirth='1992-09-27',
+    PermanentAddress='746 Southwick Ct.',
+    Gender='F',
+    ContactNumber='9876543'
+WHERE Username='student6';
+
+UPDATE RegUser
+SET Address='South Park',
+    Name='Eric Cartman',
+    Email='miiiim@whine.net',
+    DateOfBirth='1997-12-21',
+    PermanentAddress='South Park',
+    Gender='M',
+    ContactNumber='6667543'
+WHERE Username='student7';
+
+UPDATE RegUser
+SET Address='Matrix',
+    Name='Mr. Anderson',
+    Email='neo@superfast.com',
+    DateOfBirth='1987-04-30',
+    PermanentAddress='Real World',
+    Gender='M',
+    ContactNumber='5558100'
+WHERE Username='student8';
+
+UPDATE RegUser
+SET Address='123 Wright Settlement',
+    Name='Sarah Duval',
+    Email='oooohhhhh@hello.com',
+    DateOfBirth='1989-06-30',
+    PermanentAddress='123 Wright Settlement',
+    Gender='F',
+    ContactNumber='7470098'
+WHERE Username='student9';
+
+UPDATE RegUser
+SET Address='North Ave',
+    Name='Vad Lee',
+    Email='vad@the.impaler',
+    DateOfBirth='1993-03-08',
+    PermanentAddress='North Ave',
+    Gender='M',
+    ContactNumber='6369876'
+WHERE Username='student10';
+
+UPDATE RegUser
+SET Address='95 Ponce de Leon',
+    Name='Howard Walowitz',
+    Email='howard@psy.ch',
+    DateOfBirth='1988-04-13',
+    PermanentAddress='95 Ponce de Leon',
+    Gender='M',
+    ContactNumber='7352345'
+WHERE Username='student11';
+
+UPDATE RegUser
+SET Address='2954 Georgia Tech Station',
+    Name='Pepper Potts',
+    Email='pp@starkindustries.net',
+    DateOfBirth='1976-05-24',
+    PermanentAddress='Iron Man Mansion',
+    Gender='F',
+    ContactNumber='9373874'
+WHERE Username='student12';
+
+UPDATE RegUser
+SET Address='69 West Peachtree',
+    Name='Green Lantern',
+    Email='earth@grennlantern.org',
+    DateOfBirth='1982-02-23',
+    PermanentAddress='69 West Peachtree',
+    Gender='M',
+    ContactNumber='4567834'
+WHERE Username='student13';
+
+UPDATE RegUser
+SET Address='838 North Avenue',
+    Name='Marcia Blankenship',
+    Email='me@emailz.wordz',
+    DateOfBirth='1991-10-31',
+    PermanentAddress='838 North Avenue',
+    Gender='F',
+    ContactNumber='8745745'
+WHERE Username='student14';
+
+
+UPDATE RegUser
+SET Address='Center St.',
+    Name='Fred Flinstone',
+    Email='what@is.email',
+    DateOfBirth='1987-03-12',
+    PermanentAddress='Dinosaur',
+    Gender='M',
+    ContactNumber='0000000'
+WHERE Username='student15';
+
+UPDATE RegUser
+SET Address='Bikini Bottom',
+    Name='Spongebob Squarepants',
+    Email='spongebob@krabby.patty',
+    DateOfBirth='1987-03-12',
+    PermanentAddress='Bikini Bottom',
+    Gender='M',
+    ContactNumber='4564545'
+WHERE Username='student16';
+
+UPDATE RegUser
+SET Address='Long Island',
+    Name='Iced Tea',
+    Email='iliketea@long.island',
+    DateOfBirth='1990-12-30',
+    PermanentAddress='Long Island',
+    Gender='F',
+    ContactNumber='6521095'
+WHERE Username='student17';
+
+UPDATE RegUser
+SET Address='GT',
+    Name='MaChelle Joseph',
+    Email='joseph@gtaa.org',
+    DateOfBirth='1970-05-07',
+    PermanentAddress='GT',
+    Gender='F',
+    ContactNumber='8763451'
+WHERE Username='student18';
+
+UPDATE RegUser
+SET Address='GT',
+    Name='Tevin Washington',
+    Email='twashington3@gatech.edu',
+    DateOfBirth='1990-01-01',
+    PermanentAddress='GT',
+    Gender='M',
+    ContactNumber='0101010'
+WHERE Username='student19';
+
+
+UPDATE RegUser
+SET Address='123 Bob Rd',
+    Name='Steve Smith',
+    Email='steve@email.com',
+    DateOfBirth='1992-03-21',
+    PermanentAddress='123 Bob Rd',
+    Gender='M',
+    ContactNumber='7776565'
+WHERE Username='student20';
+
+
+UPDATE RegUser
+SET Address='Australia',
+    Name='Steve Irwin',
+    Email='steve@crochunter.com',
+    DateOfBirth='1969-02-27',
+    PermanentAddress='Australia',
+    Gender='M',
+    ContactNumber='2223456'
+WHERE Username='student21';
+
+
+UPDATE RegUser
+SET Address='California',
+    Name='Leslie Winkle',
+    Email='leslie@ilikefood.com',
+    DateOfBirth='1994-03-12',
+    PermanentAddress='Moon',
+    Gender='F',
+    ContactNumber='6767890'
+WHERE Username='student22';
+
+
+UPDATE RegUser
+SET Address='Atlanta',
+    Name='Greg Maddux',
+    Email='greg.maddux@braves.org',
+    DateOfBirth='1971-02-12',
+    PermanentAddress='Atlanta',
+    Gender='M',
+    ContactNumber='4782345'
+WHERE Username='student23';
+
+
+
+
+

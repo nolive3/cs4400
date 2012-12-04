@@ -1,0 +1,27 @@
+-- Username - foreign key on Student  |
+-- CRN - foregn key on Section        | - primary key
+-- Grade
+-- Grade_mode
+
+CREATE TABLE `Registration`
+(
+    Username varchar(50)
+        NOT NULL,
+    CRN int
+        NOT NULL,
+    Grade int,
+    Grade_mode varchar(50),
+
+    PRIMARY KEY (Username, CRN),
+
+    FOREIGN KEY (Username)
+        REFERENCES `Student` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (CRN)
+        REFERENCES `Section` (CRN)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

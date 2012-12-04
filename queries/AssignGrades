@@ -1,0 +1,16 @@
+SELECT CRN, Student.Username, Student_Id
+FROM Student JOIN Registration
+ON Student.Username=Registration.Username
+WHERE Registration.CRN IN 
+    (
+        SELECT CRN 
+        FROM Section
+        WHERE Username='$Username' AND Term='$CurrentTerm'
+    )
+GROUP BY CRN;
+
+
+UPDATE Registration
+SET Grade='$Grade'
+WHERE Username='$Username' AND CRN='$CRN';
+

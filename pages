@@ -1,0 +1,14 @@
+Sno	Task				Points		Done?
+1	Login				6		yes
+2	Create Account			6		yes
+3	Personal Information(Student)	8		needs testing
+4	Personal Information(Faculty)	8		needs testing
+5	Register for course		8		needs testing
+6	View Registered Courses		6		needs testing
+7	Assign Tutors			8		yay!
+8	Find Tutors			8		needs testing
+9	Tutor Logbook			8		needs testing
+10	Administrative Report		12		needs testing
+11	Faculty Report			12		needs testing
+12	Student Report			10		needs testing
+TOTAL					100

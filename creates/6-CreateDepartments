@@ -1,0 +1,16 @@
+INSERT INTO Department (Dept_Id, Name)
+    VALUE ('AE', 'Aerospace Engineering');
+
+INSERT INTO Department (Dept_Id, Name)
+    VALUE ('BIOL', 'Biology');
+
+INSERT INTO Department (Dept_Id, Name)
+    VALUE ('BME', 'Biomedical Engineering');
+
+INSERT INTO Department (Dept_Id, Name)
+    VALUE ('CS', 'Computer Science');
+
+INSERT INTO Department (Dept_Id, Name)
+    VALUE ('ECE', 'Electrical & Computer Engineering');
+
+

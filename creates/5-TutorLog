@@ -1,0 +1,34 @@
+-- TutorUsername - foreign key on Tutor        |
+-- StudentUsername - foreign key on Student    |
+-- SectionCRN - foreign key on Section         | - primary key
+-- DateTime                                    |
+
+CREATE TABLE `TutorLog`
+(
+    TutorUsername varchar(50)
+        NOT NULL,
+    StudentUsername varchar(50)
+        NOT NULL,
+    SectionCRN int
+        NOT NULL,
+    DateTime datetime
+        NOT NULL,
+
+    PRIMARY KEY (TutorUsername, StudentUsername, SectionCRN, DateTime),
+
+    FOREIGN KEY (TutorUsername)
+        REFERENCES `Tutor` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (StudentUsername)
+        REFERENCES `Student` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (SectionCRN)
+        REFERENCES `Section` (CRN)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

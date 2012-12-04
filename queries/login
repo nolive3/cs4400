@@ -1,0 +1,6 @@
+SELECT Username
+FROM User
+WHERE
+    Username='$username'
+    AND Password='$password';
+

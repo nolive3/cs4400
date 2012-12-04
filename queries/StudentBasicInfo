@@ -1,0 +1,12 @@
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('$Username', '$Dept_Id', '$Degree');
+
+UPDATE RegUser
+SET Address='$Address',
+    Name='$Name',
+    Email='$Email',
+    DateOfBirth='$DateOfBirth',
+    PermanentAddress='$PermanentAddress',
+    Gender='$Gender',
+    ContactNumber='$ContactNumber'
+WHERE Username='$Username';

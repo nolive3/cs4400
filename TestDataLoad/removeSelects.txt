@@ -1,0 +1,572 @@
+INSERT INTO User (Username, Password, Type)
+    VALUE ('admin', '123', 'A');
+
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Intro to GT AE', 'AE');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Intro to GT ECE', 'ECE');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Warp Drive, Intro to', 'AE');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Non Melting Computers', 'ECE');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Physiology','BME');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Human Brain','BME');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Intro to Python','CS');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Video Game Playing','CS');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Supercomputer Building','CS');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Plant Circuitry','BIOL');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Cellular Education','BIOL');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Rocket Launching','AE');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Duct Tape Circuits','ECE');
+
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('Drownproofing','ECE');
+
+
+
+
+
+INSERT INTO SameAs (Title1, Title2) 
+    VALUES 
+        ('Intro to GT ECE', 'Intro to GT ECE'),
+        ('Intro to GT AE', 'Intro to GT AE'),
+        ('Intro to GT AE', 'Intro to GT ECE'),
+        ('Intro to GT ECE', 'Intro to GT AE');
+
+INSERT INTO SameAs (Title1, Title2) 
+    VALUES 
+        ('Drownproofing','Supercomputer Building'),
+        ('Drownproofing','Drownproofing'),
+        ('Supercomputer Building','Drownproofing'),
+        ('Supercomputer Building','Supercomputer Building');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Duct Tape Circuits','Duct Tape Circuits'),
+        ('Duct Tape Circuits','Plant Circuitry'),
+        ('Plant Circuitry','Duct Tape Circuits'),
+        ('Plant Circuitry','Plant Circuitry');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Warp Drive, Intro to','Warp Drive, Intro to');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Non Melting Computers','Non Melting Computers');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Physiology','Physiology');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Human Brain','Human Brain');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Intro to Python','Intro to Python');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Video Game Playing','Video Game Playing');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Cellular Education','Cellular Education');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('Rocket Launching','Rocket Launching');
+
+
+
+
+
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(1234,'12:30-1:30','MWF','CULC 101','Fall 2012','A','Intro to GT AE','profman123');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(1235,'12:30-1:30','MWF','CULC 102','Fall 2012','B','Intro to GT ECE','danG');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(1236,'11:30-12:30','MWF','CULC 101','Fall 2012','C','Intro to GT AE','profman123');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(11234,'12:30-1:30','MWF','CULC 101','Spring 2013','A','Intro to GT AE','profman123');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(11235,'12:30-1:30','MWF','CULC 102','Spring 2013','B','Intro to GT ECE','danG');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(11236,'11:30-12:30','MWF','CULC 101','Spring 2013','C','Intro to GT AE','profman123');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(4312,'1:30-3:00','TR','TBD','Fall 2012','A','Warp Drive, Intro to','professor7');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(4313,'2:30-4:00','TR','TBD','Fall 2012','B','Warp Drive, Intro to','professor7');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(14312,'1:30-3:00','TR','TBD','Spring 2013','A','Warp Drive, Intro to','professor7');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(14313,'2:30-4:00','TR','TBD','Spring 2013','B','Warp Drive, Intro to','professor7');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(5634,'8:00-10:00','MWF','Van Leer W200','Fall 2012','A','Non Melting Computers','professor16');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(5635,'10:00-12:00','MWF','Van Leer W200','Fall 2012','B','Non Melting Computers','professor16');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(5636,'12:00-2:00','MWF','Van Leer W200','Fall 2012','C','Non Melting Computers','professor16');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(15634,'8:00-10:00','MWF','Van Leer W200','Spring 2013','A','Non Melting Computers','professor16');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(15635,'10:00-12:00','MWF','Van Leer W200','Spring 2013','B','Non Melting Computers','professor16');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE(15636,'12:00-2:00','MWF','Van Leer W200','Spring 2013','C','Non Melting Computers','professor16');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98765,'8:00-9:00','MWF','Biomed 101','Fall 2012','A','Physiology','professor6');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98764,'9:00-10:00','MWF','Biomed 101','Fall 2012','B','Physiology','professor6');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98763,'9:00-10:30','TR','Biomed 202','Fall 2012','A','Human Brain','professor9');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98762,'10:30-12:00','TR','Biomed 203','Fall 2012','B','Human Brain','professor9');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98761,'1:00-2:00','MWF','Klaus 1447','Fall 2012','A','Intro to Python','professor4');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98710,'2:00-3:00','MWF','Klaus 1447','Fall 2012','B','Intro to Python','professor8');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98711,'11:00-12:00','MWF','Klaus 2444','Fall 2012','A','Video Game Playing','professor13');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98712,'12:00-1:00','MWF','Klaus 1451','Fall 2012','B','Video Game Playing','professor13');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98713,'2:00-3:30','TR','CoC 101','Fall 2012','A','Supercomputer Building','professor10');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98714,'3:30-5:00','TR','CoC 202','Fall 2012','B','Supercomputer Building','professor10');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98715,'9:00-10:00','MWF','Cherry Emerson 101','Fall 2012','A','Plant Circuitry','professor5');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98719,'10:00-11:00','MWF','Cherry Emerson 101','Fall 2012','B','Plant Circuitry','professor11');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98716,'12:00-1:00','MWF','IC 105','Fall 2012','A','Cellular Education','professor12');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98717,'1:00-2:00','MWF','IC 115','Fall 2012','B','Cellular Education','professor12');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98718,'9:00-10:30','TR','Weber 1','Fall 2012','A','Rocket Launching','professor7');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98769,'10:30-12:00','TR','Weber 2','Fall 2012','B','Rocket Launching','professor14');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(987145,'8:00-9:00','MWF','Van Leer 104','Fall 2012','A','Duct Tape Circuits','professor15');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(98743,'12:00-1:00','MWF','Van Leer 104','Fall 2012','B','Duct Tape Circuits','professor15');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(55567,'12:00-1:00','MWF','CRC','Fall 2012','A','Drownproofing','professor3');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(55568,'1:00-2:00','MWF','CRC','Fall 2012','B','Drownproofing','professor3');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(101234,'1:00-2:00','MWF','CRC','Fall 2011','A','Drownproofing','professor3');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(101235,'3:30-5:00','TR','CoC 202','Fall 2011','A','Supercomputer Building','professor10');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(101236,'11:00-12:00','MWF','Klaus 2444','Fall 2011','A','Video Game Playing','professor13');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(34567,'8:00-9:00','MWF','Biomed 101','Spring 2013','A','Physiology','professor6');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(34568,'12:00-1:00','MWF','Klaus 1451','Spring 2013','A','Video Game Playing','professor13');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter, Title, Username)
+    VALUE(34569,'9:00-10:00','MWF','Cherry Emerson 101','Spring 2013','A','Plant Circuitry','professor5');
+
+
+
+INSERT INTO EducationHistory (Username, Name_of_School, Year_of_Grad, Degree, Major, GPA)
+    VALUES ('gburdell3', 'MIT','1913', 'MS', 'AE', '4.0');
+
+
+
+
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('slacker', 98718, 'Letter');
+
+UPDATE Registration
+SET Grade='2'
+WHERE Username='slacker' AND CRN=98718;
+
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('slacker', 55568, 'Letter');
+
+UPDATE Registration
+SET Grade='4'
+WHERE Username='slacker' AND CRN=55568;
+
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('slacker', 1235, 'Letter');
+
+UPDATE Registration
+SET Grade='3'
+WHERE Username='slacker' AND CRN=1235;
+
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('gburdell3', 98718, 'Letter');
+
+UPDATE Registration
+SET Grade='4'
+WHERE Username='gburdell3' AND CRN=98718;
+
+
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student10', 98711, 'Letter');
+
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student10' AND CRN=98711;
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student14', 55568, 'Letter');
+
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student14' AND CRN=55568;
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student8', 101234, 'Letter');
+
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student8' AND CRN=101234;
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student15', 101235, 'Letter');
+
+UPDATE Registration
+SET Grade='4'
+WHERE Username='student15' AND CRN=101235;
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student15', 101236, 'Letter');
+
+UPDATE Registration
+SET Grade='4'
+WHERE Username='student15' AND CRN=101236;
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student9', 101236, 'Letter');
+
+UPDATE Registration
+SET Grade='4'
+WHERE Username='student9' AND CRN=101236;
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('slacker', 5636, 'Letter');
+UPDATE Registration
+SET Grade = '1'
+WHERE Username ='slacker' AND CRN=5636;
+
+
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student3', 98714, 'Letter');
+
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student3' AND CRN=98714;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student16', 55568, 'Letter');
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student16' AND CRN=55568;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student17', 55568, 'Letter');
+UPDATE Registration
+SET Grade='2'
+WHERE Username='student17' AND CRN=55568;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student18', 55568, 'Letter');
+UPDATE Registration
+SET Grade='4'
+WHERE Username='student18' AND CRN=55568;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student19', 55568, 'Letter');
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student19' AND CRN=55568;
+
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student20', 98711, 'Letter');
+UPDATE Registration
+SET Grade='1'
+WHERE Username='student20' AND CRN=98711;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student21', 98711, 'Letter');
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student21' AND CRN=98711;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student22', 98711, 'Letter');
+UPDATE Registration
+SET Grade='4'
+WHERE Username='student22' AND CRN=98711;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student23', 98711, 'Letter');
+UPDATE Registration
+SET Grade='2'
+WHERE Username='student23' AND CRN=98711;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student20', 98714, 'Letter');
+UPDATE Registration
+SET Grade='1'
+WHERE Username='student20' AND CRN=98714;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student21', 98714, 'Letter');
+UPDATE Registration
+SET Grade='3'
+WHERE Username='student21' AND CRN=98714;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student22', 98714, 'Letter');
+UPDATE Registration
+SET Grade='4'
+WHERE Username='student22' AND CRN=98714;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('student23', 98714, 'Letter');
+UPDATE Registration
+SET Grade='2'
+WHERE Username='student23' AND CRN=98714;
+
+
+
+
+
+
+INSERT INTO TutorApplication (Username, Title)
+VALUES ('student8', 'Drownproofing');
+
+INSERT INTO TutorApplication (Username, Title)
+VALUES ('student9', 'Video Game Playing');
+
+INSERT INTO TutorApplication (Username, Title)
+VALUES ('student15', 'Video Game Playing');
+
+INSERT INTO TutorApplication (Username, Title)
+VALUES ('student15', 'Supercomputer Building');
+
+
+
+INSERT INTO Tutor (Username)
+    VALUES ('student15');
+INSERT INTO TutorPosition(Username, Title)
+    VALUES ('student15','Video Game Playing');
+INSERT INTO TutorPosition(Username, Title)
+    VALUES ('student15','Supercomputer Building');
+
+INSERT INTO Tutor (Username)
+    VALUES ('student8');
+INSERT INTO TutorPosition(Username, Title)
+    VALUES ('student8','Drownproofing');
+
+INSERT INTO Tutor (Username)
+    VALUES ('student9');
+INSERT INTO TutorPosition(Username, Title)
+    VALUES ('student9','Video Game Playing');
+
+
+
+
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=2), 
+    55568, '2012-12-03 11:47:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=2), 
+    55568, '2012-12-03 11:47:45');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=2), 
+    55568, '2012-12-03 11:48:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=2), 
+    55568, '2012-12-03 11:48:45');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=16), 
+    55568, '2012-12-03 11:48:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=16), 
+    55568, '2012-12-03 11:48:45');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=16), 
+    55568, '2012-12-03 11:47:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=16), 
+    55568, '2012-12-03 11:47:45');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=17), 
+    55568, '2012-12-03 11:48:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=17), 
+    55568, '2012-12-03 11:48:45');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student8', (SELECT Username FROM Student WHERE Student_Id=18), 
+    55568, '2012-12-03 11:47:12');
+
+
+
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98711, '2012-12-03 11:41:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98711, '2012-12-03 11:42:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98711, '2012-12-03 11:43:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98711, '2012-12-03 11:44:12');
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98711, '2012-12-03 11:45:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98711, '2012-12-03 11:46:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98711, '2012-12-03 11:47:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98711, '2012-12-03 11:48:12');
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98711, '2012-12-03 10:47:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=21), 
+    98711, '2012-12-03 11:49:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=21), 
+    98711, '2012-12-03 11:50:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=22), 
+    98711, '2012-12-03 11:51:12');
+
+
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98714, '2012-12-03 10:41:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98714, '2012-12-03 10:42:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98714, '2012-12-03 10:43:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98714, '2012-12-03 10:44:12');
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=10), 
+    98714, '2012-12-03 10:45:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98714, '2012-12-03 10:46:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98714, '2012-12-03 10:47:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98714, '2012-12-03 10:48:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=3), 
+    98714, '2012-12-03 11:47:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=21), 
+    98714, '2012-12-03 10:49:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=21), 
+    98714, '2012-12-03 10:50:12');
+
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime)
+    VALUES ('student15', (SELECT Username FROM Student WHERE Student_Id=22), 
+    98714, '2012-12-03 10:51:12');
+
+
+
+
+

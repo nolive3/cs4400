@@ -1,0 +1,5 @@
+SELECT DISTINCT Code
+FROM Registration R, Section S, CourseCode CC 
+WHERE R.CRN=S.CRN AND S.Title=CC.Title 
+    AND R.Username='$Username' AND R.Grade>=3;
+

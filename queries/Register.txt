@@ -1,0 +1,16 @@
+SELECT Title, Letter AS Section, Grade_Mode
+    FROM Section JOIN Registration 
+    ON Section.CRN=Registration.CRN
+    WHERE Registration.Username='$Username' AND Term='$CurrentTerm';
+
+SELECT CRN, Course.Title AS Title, Course.Dept_Id AS CourseCode, Letter AS Section, Name AS Instructor, Day, Time, Location
+    FROM Course JOIN Section JOIN RegUser
+    ON Course.Title=Section.Title AND Section.Username=RegUser.Username
+    WHERE Dept_Id='$Dept_Id' AND Term='$CurrentTerm';
+
+SELECT Name 
+    FROM Department;
+
+INSERT INTO Registration (Username, CRN, Grade_Mode)
+    VALUE ('$Username', '$CRN', '$Grade_Mode');
+

@@ -1,0 +1,12 @@
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('$Username', '$Dept_Id', '$Position');
+
+UPDATE RegUser
+SET Address='$Address',
+    Name='$Name',
+    Email='$Email',
+    DateOfBirth='$DateOfBirth',
+    PermanentAddress='$PermanentAddress',
+    Gender='$Gender',
+    ContactNumber='$ContactNumber'
+WHERE Username='$Username';

@@ -1,0 +1,2 @@
+INSERT INTO EducationHistory (Username, Name_of_School, Year_of_Grad, Degree, Major, GPA)
+    VALUES ('$Username', '$Name_of_School','$Year_of_Grad', '$Degree', '$Major', '$GPA');

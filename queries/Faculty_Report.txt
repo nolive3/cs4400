@@ -1,0 +1,34 @@
+SELECT AVG(Grade) AS grade, GROUP_CONCAT(DISTINCT Title2 ORDER BY Title2) AS name 
+FROM Registration JOIN SameAs JOIN Section
+	ON SameAs.Title2=Section.Title AND 
+	Registration.CRN=Section.CRN 
+WHERE NOT EXISTS (SELECT TL.StudentUsername FROM TutorLog AS TL
+	WHERE TL.SectionCRN=Section.CRN
+	AND TL.StudentUsername=Registration.Username
+	GROUP BY Registration.Username)
+GROUP BY Title1;
+
+
+SELECT AVG(Grade) AS grade, GROUP_CONCAT(DISTINCT Title2 ORDER BY Title2) AS name 
+FROM Registration JOIN SameAs JOIN Section
+	ON SameAs.Title2=Section.Title AND 
+	Registration.CRN=Section.CRN 
+WHERE EXISTS (SELECT TL.StudentUsername FROM TutorLog AS TL
+	WHERE TL.SectionCRN=Section.CRN
+	AND TL.StudentUsername=Registration.Username
+	GROUP BY Registration.Username
+	HAVING COUNT(*)<3)
+GROUP BY Title1;
+
+
+SELECT AVG(Grade) AS grade, GROUP_CONCAT(DISTINCT Title2 ORDER BY Title2) AS name 
+FROM Registration JOIN SameAs JOIN Section
+	ON SameAs.Title2=Section.Title AND 
+	Registration.CRN=Section.CRN 
+WHERE EXISTS (SELECT TL.StudentUsername FROM TutorLog AS TL
+	WHERE TL.SectionCRN=Section.CRN
+	AND TL.StudentUsername=Registration.Username
+	GROUP BY Registration.Username
+	HAVING COUNT(*)>3)
+GROUP BY Title1;
+

@@ -1,0 +1,16 @@
+-- Username - primary key
+-- Password
+-- Type - (Admin/Reguser)
+
+CREATE TABLE `User`
+(
+    Username varchar(50)
+        NOT NULL,
+    Password varchar(50)
+        NOT NULL,
+    Type char(1)
+        NOT NULL,
+
+    PRIMARY KEY (Username)
+);
+

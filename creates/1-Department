@@ -1,0 +1,13 @@
+-- Dept_Id - primary key
+-- Name
+
+CREATE TABLE `Department`
+(
+    Dept_Id varchar(50)
+        NOT NULL,
+    Name varchar(50)
+        NOT NULL,
+
+    PRIMARY KEY (Dept_Id)
+);
+

@@ -1,0 +1,30 @@
+-- Username - foreign key on Student, form Has_History relation  |
+-- Name_of_School                                                |
+-- Year_of_Grad                                                  | - primary key
+-- Degree
+-- Major
+-- GPA
+
+CREATE TABLE `EducationHistory`
+(
+    Username varchar(50)
+        NOT NULL,
+    Name_of_School varchar(50)
+        NOT NULL,
+    Year_of_Grad int
+        NOT NULL,
+    Degree varchar(50),
+    Major varchar(50),
+    GPA decimal(3,2),
+
+    PRIMARY KEY (
+        Username, 
+        Name_of_School, 
+        Year_of_grad),
+
+    FOREIGN KEY (Username)
+        REFERENCES `Student` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

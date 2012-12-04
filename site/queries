@@ -1,0 +1,88 @@
+INSERT INTO TutorLog (TutorUsername, StudentUsername, SectionCRN, DateTime) VALUE (:u,(SELECT Username FROM Student WHERE Student_Id=:id),(SELECT MIN(Registration.CRN) FROM Registration JOIN Student JOIN Section ON Student.Username=Registration.Username AND Registration.CRN=Section.CRN WHERE Student.Student_Id=:id AND Section.Title=:title), :date)
+
+
+SELECT SA.Title1 AS name, AVG(Grade) AS grade FROM Registration AS R JOIN (Section AS S JOIN SameAs AS SA ON S.Title=SA.Title2) ON R.CRN=S.CRN WHERE Grade_mode='Letter' GROUP BY SA.Title1
+SELECT Title2 FROM SameAs WHERE Title1=:t ORDER BY Title2 ASC
+
+
+SELECT DISTINCT TP.Username FROM TutorPosition AS TP JOIN Section AS S ON TP.Title=S.Title WHERE S.Username=:u
+SELECT RU.Name, St.Username, MAX(St.Grade) AS Grade FROM TutorApplication AS TA JOIN RegUser AS RU JOIN Registration AS St JOIN Section AS Se ON St.Username=RU.Username AND TA.Title=Se.Title AND TA.Username=St.Username WHERE Se.Username=:u GROUP BY St.Username
+
+
+SELECT * FROM EducationHistory WHERE Username=:u
+
+
+INSERT INTO Faculty(Username, Dept_Id) VALUE (:u, 'AE')
+SELECT Dept_Id, Position FROM Faculty WHERE Username=:u
+SELECT Dept_Id, Name FROM Department
+
+
+SELECT AVG(Grade) AS grade, GROUP_CONCAT(DISTINCT Title2 ORDER BY Title2) AS name FROM Registration JOIN SameAs JOIN Section ON SameAs.Title2=Section.Title AND Registration.CRN=Section.CRN WHERE Grade_mode='Letter' AND NOT EXISTS (SELECT TL.StudentUsername FROM TutorLog AS TL WHERE TL.SectionCRN=Section.CRN AND TL.StudentUsername=Registration.Username GROUP BY Registration.Username) GROUP BY Title1;
+SELECT AVG(Grade) AS grade, GROUP_CONCAT(DISTINCT Title2 ORDER BY Title2) AS name FROM Registration JOIN SameAs JOIN Section ON SameAs.Title2=Section.Title AND Registration.CRN=Section.CRN WHERE Grade_mode='Letter' AND EXISTS (SELECT TL.StudentUsername FROM TutorLog AS TL WHERE TL.SectionCRN=Section.CRN AND TL.StudentUsername=Registration.Username GROUP BY Registration.Username HAVING COUNT(*)<3) GROUP BY Title1
+SELECT AVG(Grade) AS grade, GROUP_CONCAT(DISTINCT Title2 ORDER BY Title2) AS name FROM Registration JOIN SameAs JOIN Section ON SameAs.Title2=Section.Title AND Registration.CRN=Section.CRN WHERE Grade_mode='Letter' AND EXISTS (SELECT TL.StudentUsername FROM TutorLog AS TL WHERE TL.SectionCRN=Section.CRN AND TL.StudentUsername=Registration.Username GROUP BY Registration.Username HAVING COUNT(*)>3) GROUP BY Title1
+
+
+UPDATE Faculty SET Position=:p, Dept_Id=:d WHERE Username=:u
+
+
+UPDATE RegUser SET Address=:a, Name=:n, Email=:e, DateOfBirth=:d, PermanentAddress=:p, Gender=:g, ContactNumber=:c WHERE Username=:u
+
+
+UPDATE Student SET Degree=:d, Major=:m WHERE Username=:u
+
+
+SELECT Course.Title, GROUP_CONCAT(RegUser.Name, '<', RegUser.Email, '>' SEPARATOR ', ') AS res FROM Course JOIN RegUser JOIN TutorPosition ON RegUser.Username = TutorPosition.Username AND Course.Title = TutorPosition.Title WHERE Course.Title LIKE :t GROUP BY Course.Title;
+SELECT Section.Title, GROUP_CONCAT(RegUser.Name, '<', RegUser.Email, '>' SEPARATOR ', ') AS res FROM Section JOIN RegUser JOIN TutorPosition ON RegUser.Username = TutorPosition.Username AND Section.Title = TutorPosition.Title WHERE Section.CRN = :t GROUP BY Section.Title;
+
+
+SELECT Type, Name FROM RegUser WHERE Username=:user;
+SELECT S.Term AS term, R.CRN AS CRN, R.Grade_mode AS mode, R.Grade AS grade, S.Title AS title, S.Letter AS section, S.Time AS time, S.Day AS day, S.Location AS location, RU.Name AS instructor FROM Registration AS R JOIN Section AS S JOIN RegUser AS RU ON RU.Username=S.Username AND R.CRN=S.CRN WHERE R.Username=:u
+SELECT S.CRN AS CRN, S.Title AS title, S.Letter AS section, S.Time AS time, S.Day AS day, S.Location AS location, RU.Name AS instructor FROM Section AS S JOIN RegUser AS RU JOIN Course AS C ON RU.Username=S.Username AND C.Title=S.Title WHERE Term=:t AND C.Dept_Id=:dept
+SELECT R.CRN AS CRN, R.Grade_mode AS mode, S.Title AS title, S.Letter AS section, S.Time AS time, S.Day AS day, S.Location AS location, RU.Name AS instructor FROM Registration AS R JOIN Section AS S JOIN RegUser AS RU ON RU.Username=S.Username AND R.CRN=S.CRN WHERE Term=:t AND R.Username=:u
+SELECT Student_Id AS ID, Major FROM Student WHERE Username=:u
+SELECT Instructor_Id AS ID FROM Faculty WHERE Username=:u
+
+
+SELECT Username, Type FROM User WHERE Username=:name AND Password=:pass;
+
+
+SELECT * FROM RegUser WHERE Username=:user
+
+
+INSERT INTO User (Username, Password, Type) VALUE (:user, :pass, 'R');
+INSERT INTO RegUser (Username, Type) VALUE (:user, :type);
+
+
+SELECT * FROM FacultyResearchIntrest WHERE Username=:u
+
+
+INSERT INTO Student(Username) VALUE (:u)
+SELECT Major, Degree FROM Student WHERE Username=:u
+SELECT Dept_Id, Name FROM Department
+
+
+SELECT RegUser.Name AS Name, Title, AVG(Grade) AS Grade FROM Registration JOIN Section JOIN RegUser ON Section.Username=RegUser.Username AND Registration.CRN=Section.CRN WHERE Grade_mode='Letter' GROUP BY Name
+
+
+SELECT Title FROM TutorPosition WHERE Username=:u
+
+
+INSERT INTO EducationHistory VALUE (:u, :school, :year, :deg, :maj, :gpa)
+UPDATE EducationHistory SET Degree=:deg, Major=:maj, GPA=:gpa WHERE Username=:u AND Name_of_School=:school AND Year_of_Grad=:year
+DELETE FROM EducationHistory WHERE Username=:u AND Name_of_School=:school AND Year_of_Grad=:year
+
+
+INSERT INTO FacultyResearchIntrest VALUE (:u, :i)
+DELETE FROM FacultyResearchIntrest WHERE Username=:u AND Intrest=:i
+
+
+INSERT INTO Registration(Username, CRN, Grade_mode) VALUE (:user,:crn,:mode)
+DELETE FROM Registration WHERE Username=:user AND CRN=:crn
+
+
+INSERT INTO Tutor VALUE (:user)
+INSERT INTO TutorPosition(Username, Title) VALUE (:user,(SELECT MAX(Title) From Section WHERE Username=:prof))
+DELETE FROM TutorPosition WHERE Username=:user AND Title IN (SELECT Title From Section WHERE Username=:prof)
+SELECT * FROM TutorPosition WHERE Username=:user
+DELETE FROM Tutor WHERE Username=:user
+

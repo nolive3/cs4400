@@ -1,0 +1,6 @@
+INSERT INTO User (Username, Password)
+    VALUE ('$Username', '$Password');
+
+INSERT INTO RegUser (Username)
+    VALUE ('$Username');
+

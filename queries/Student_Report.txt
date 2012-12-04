@@ -1,0 +1,4 @@
+SELECT RegUser.Name, Section.Title, AVG(Registration.Grade)
+    FROM RegUser JOIN Section JOIN Registration
+    WHERE RegUser.Username=Section.Username AND Registration.CRN=Section.CRN
+    GROUP BY RegUser.Username;

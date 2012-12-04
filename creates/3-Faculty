@@ -1,0 +1,30 @@
+-- Username - primary key, foreign key on RegUser
+-- Instructor_Id - candidate key
+-- Position
+-- Dept_Id - foreign key on Department, from Belongs relation
+
+CREATE TABLE `Faculty`
+(
+    Username varchar(50)
+        NOT NULL,
+    Instructor_Id int
+        AUTO_INCREMENT,
+    Position varchar(50),
+    Dept_Id varchar(50)
+        NOT NULL,
+
+    PRIMARY KEY (Username),
+
+    FOREIGN KEY (Username)
+        REFERENCES `RegUser` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (Dept_Id)
+        REFERENCES `Department` (Dept_Id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    UNIQUE KEY (Instructor_Id)
+);
+

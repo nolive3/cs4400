@@ -1,0 +1,14 @@
+INSERT INTO Course (Title, Dept_Id)
+    VALUE ('$Title', '$Dept_Id');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUE ('$Title', '$Title');
+
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE('$CRN','$Time','$Day','$Location','$Term','$Letter','$Title','$Username');
+
+INSERT INTO SameAs (Title1, Title2)
+    VALUES
+        ('$Title1', '$Title2'),
+        ('$Title2', '$Title1');
+

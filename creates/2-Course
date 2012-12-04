@@ -1,0 +1,18 @@
+-- Title - primary key
+-- Dept_Id - foreign key on Department
+
+CREATE TABLE `Course`
+(
+    Title varchar(100)
+        NOT NULL,
+    Dept_Id varchar(50)
+        NOT NULL,
+
+    PRIMARY KEY (Title),
+
+    FOREIGN KEY (Dept_Id) 
+        REFERENCES `Department` (Dept_Id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

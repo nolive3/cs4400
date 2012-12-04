@@ -1,0 +1,23 @@
+-- Title1 - foreign key on Course   | - primary key
+-- Title2 - foreign key on Course   |
+
+
+CREATE TABLE `SameAs`
+(
+    Title1 varchar(100)
+        NOT NULL,
+    Title2 varchar(100)
+        NOT NULL,
+
+    PRIMARY KEY (Title1, Title2),
+
+    FOREIGN KEY (Title1)
+        REFERENCES `Course` (Title)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (Title2)
+        REFERENCES `Course` (Title)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);

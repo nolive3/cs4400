@@ -1,0 +1,41 @@
+-- CRN - primary key
+-- Username - foreign key on Faculty, from Teaches relation
+-- Title - foreign key on Course, from has relation       |
+-- Letter                                                 | - candidate key
+-- Term          |                                        |
+-- Time          |
+-- Day           | - candidate key
+-- Location      |
+
+CREATE TABLE `Section`
+(
+    CRN int
+        NOT NULL,
+    Username varchar(50)
+        NOT NULL,
+    Title varchar(50)
+        NOT NULL,
+    Letter varchar(1)
+        NOT NULL,
+    Time varchar(50),
+    Day varchar(50),
+    Location varchar(50),
+    Term varchar(50),
+
+    PRIMARY KEY (CRN),
+
+    FOREIGN KEY (Username)
+        REFERENCES `Faculty` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (Title)
+        REFERENCES `Course` (Title)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    UNIQUE KEY (Title, Letter, Term),
+
+    UNIQUE KEY (Time, Day, Location, Term)
+);
+

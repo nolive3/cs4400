@@ -1,0 +1,4 @@
+SELECT Section.Title, AVG(Registration.Grade)
+    FROM Section JOIN Registration
+    WHERE Section.CRN=Registration.CRN
+    GROUP BY Section.Title;

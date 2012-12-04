@@ -1,0 +1,32 @@
+-- Username - primary key, foreign key on User
+-- Address
+-- Name
+-- Email
+-- DateOfBirth
+-- PermanentAddress
+-- Gender
+-- ContactNumber
+-- Type (Student/Faculty)
+
+CREATE TABLE `RegUser`
+(
+    Username varchar(50)
+        NOT NULL,
+    Address varchar(50),
+    Name varchar(50),
+    Email varchar(50),
+    DateOfBirth date,
+    PermanentAddress varchar(50),
+    Gender varchar(1),
+    ContactNumber varchar(11), -- country code area code number
+    Type char(1)
+        NOT NULL,
+
+    PRIMARY KEY (Username),
+
+    FOREIGN KEY (Username)
+        REFERENCES `User` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

@@ -1,0 +1,8 @@
+SELECT *
+FROM Faculty NATURAL JOIN RegUser
+WHERE Faculty.Username='$Username';
+
+SELECT Title, Letter
+FROM Section
+WHERE Username='$Username';
+

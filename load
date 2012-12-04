@@ -1,0 +1,7 @@
+drop database cs4400_Group19;
+create database cs4400_Group19;
+use cs4400_Group19;
+source 0-load;
+source TestDataLoad/students.txt;
+source TestDataLoad/professors.txt;
+source TestDataLoad/removeSelects.txt;

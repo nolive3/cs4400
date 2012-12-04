@@ -1,0 +1,23 @@
+-- Username - foreign key on Student   |
+-- Title - foreign key on Course       | - primary key
+
+CREATE TABLE `TutorApplication`
+(
+    Username varchar(50)
+        NOT NULL,
+    Title varchar(100)
+        NOT NULL,
+
+    PRIMARY KEY (Username, Title),
+
+    FOREIGN KEY (Username)
+        REFERENCES `Student` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (Title)
+        REFERENCES `Course` (Title)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

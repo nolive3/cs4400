@@ -1,0 +1,15 @@
+-- Username - primary key, foreign key on User
+
+CREATE TABLE `Admin`
+(
+    Username varchar(50) 
+        NOT NULL,
+
+    PRIMARY KEY (Username),
+
+    FOREIGN KEY (Username)
+        REFERENCES `User` (Username)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+

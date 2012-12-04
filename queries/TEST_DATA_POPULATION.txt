@@ -1,0 +1,66 @@
+
+
+
+INSERT INTO User (Username, Password)
+    VALUE ('gburdell3', '123');
+INSERT INTO RegUser (Username)
+    VALUE ('gburdell3');
+INSERT INTO User (Username, Password)
+    VALUE ('profman123', '123');
+INSERT INTO RegUser (Username)
+    VALUE ('profman123');
+INSERT INTO Faculty (Username, Dept_Id, Position)
+    VALUE ('profman123', 'AE', 'Professor');
+
+UPDATE RegUser
+SET Address='GT',
+    Name='Prof',
+    Email='prof@gatech.edu',
+    DateOfBirth='1943-03-23',
+    PermanentAddress='Atlanta',
+    Gender='M',
+    ContactNumber='1234567890'
+WHERE Username='profman123';
+INSERT INTO FacultyResearchIntrest (Username, Intrest)
+VALUE ('profman123', 'bowling');
+
+INSERT INTO Student (Username, Major, Degree)
+    VALUE ('gburdell3', 'AE', 'MS');
+
+UPDATE RegUser
+SET Address='CULC',
+    Name='George P. Burdell',
+    Email='gburdell3@gatech.edu',
+    DateOfBirth='1927-07-15',
+    PermanentAddress='456 North Avenue',
+    Gender='M',
+    ContactNumber='5555551234'
+WHERE Username='gburdell3';
+
+SELECT Username
+FROM User
+WHERE
+    Username='gburdell3'
+    AND Password='123';
+
+INSERT INTO Course (Title)
+    VALUE ('GT1000');
+INSERT INTO CourseCode (Title, Code)
+    VALUE ('GT1000', 'GT1000');
+INSERT INTO Section (CRN, Time, Day, Location, Term, Letter,Title,Username)
+    VALUE('1234','12:30-1:30','MWF','CULC 101','Fall','A','GT1000','profman123');
+INSERT INTO CourseOffering (Dept_ID, Title)
+    VALUE ('AE','GT1000');
+
+INSERT INTO TutorApplication (Username, Title)
+VALUES ('gburdell3', 
+    (SELECT Title
+        FROM CourseCode
+        WHERE Code='GT1000'
+    )
+);
+
+
+
+INSERT INTO EducationHistory (Username, Name_of_School, Year_of_Grad, Degree, Major, GPA)
+    VALUES ('gburdell3', 'MIT','1913', 'MS', 'AE', '4.0')
